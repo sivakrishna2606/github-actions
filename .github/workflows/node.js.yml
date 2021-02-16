@@ -22,7 +22,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - run: sudo npm install -g node-gyp 
     - run: sudo yarn
-    - run: sudo npm install -g node-gyp
     - run: sudo npm run test-coverage
     - run: sudo npm i
