@@ -23,5 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: sudo yarn
-    - run: npm run test-coverage
-    - run: npm i
+    - run: sudo npm install -g node-gyp
+    - run: sudo npm run test-coverage
+    - run: sudo npm i
